@@ -20,14 +20,20 @@
     <title>Online shopping - ${title}</title>
     
     <script type="text/javascript">
-    window.menu='${title}'
+    window.menu='${title}';
+    window.contextRoot='${contextRoot}'
     </script>
-
-    <!-- Bootstrap core CSS -->
+	<!-- Bootstrap Core CSS -->
+	<link href="${css}/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Template CSS -->
     <link href="${css }/bootstrap-litera-theme.css" rel="stylesheet">
 
+
+	<!-- Bootstrap DataTables -->
+	<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
-    <link href="${css }/shop-homepage.css" rel="stylesheet">
+    <link href="${css }/myapp.css" rel="stylesheet">
 
   </head>
 
@@ -57,15 +63,32 @@
   	<%@include file="listProducts.jsp" %>
 	</c:if>
 	
+	<!-- Load only when user click show product -->
+	<c:if test="${userClickShowProduct==true}">
+  	<%@include file="singleProduct.jsp" %>
+	</c:if>
+	
 	
     <!-- Footer -->
     <%@include file="./shared/footer.jsp" %>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="${js}/jquery.min.js"></script>
-    <script src="${js}/bootstrap.bundle.min.js"></script>
-    <!-- self code javascript -->
-     <script src="${js}/myapp.js"></script>
+		<!-- jQuery -->
+		<script src="${js}/jquery.js"></script>
+
+		<script src="${js}/jquery.validate.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- DataTable Plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		
+		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/bootbox.min.js"></script>
+		
+		<!-- Self coded javascript -->
+		<script src="${js}/myapp.js"></script>
 
   </body>
 
