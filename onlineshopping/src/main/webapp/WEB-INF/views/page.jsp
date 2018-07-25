@@ -26,7 +26,7 @@
 	<!-- Bootstrap Core CSS -->
 	<link href="${css}/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Template CSS -->
-    <link href="${css }/bootstrap-litera-theme.css" rel="stylesheet">
+    <link href="${css }/bootstrap-readable-theme.css" rel="stylesheet">
 
 
 	<!-- Bootstrap DataTables -->
@@ -66,6 +66,11 @@
 	<!-- Load only when user click show product -->
 	<c:if test="${userClickShowProduct==true}">
   	<%@include file="singleProduct.jsp" %>
+	</c:if>
+	
+	<!-- Load only when user click manage product -->
+	<c:if test="${userClickManageProducts==true}">
+  	<%@include file="manageProducts.jsp" %>
 	</c:if>
 	
 	
