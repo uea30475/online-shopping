@@ -16,6 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="_csrf" content="${_csrf.token }">
+    <meta name="_csrf_header" content="${_csrf.headerName}">
 
     <title>Online shopping - ${title}</title>
     
@@ -73,6 +75,11 @@
   	<%@include file="manageProducts.jsp" %>
 	</c:if>
 	
+	<!-- Load only when user click show cart -->
+	<c:if test="${userClickShowCart==true}">
+  	<%@include file="cart.jsp" %>
+	</c:if>
+	
 	
     <!-- Footer -->
     <%@include file="./shared/footer.jsp" %>
@@ -88,8 +95,10 @@
 		<!-- DataTable Plugin -->
 		<script src="${js}/jquery.dataTables.js"></script>
 		
-		
 		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		<!-- bootbox  -->
 		<script src="${js}/bootbox.min.js"></script>
 		
 		<!-- Self coded javascript -->

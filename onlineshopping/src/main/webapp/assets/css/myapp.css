@@ -247,4 +247,14 @@ input:checked + .slider:before {
 	width:100px;
 }
 
-
+.table-responsive{
+	
+	overflow-x: inherit;
+}
+.cartImg{
+	height:100px;
+	width:100px;
+}
+.unvailable{
+	color:red;
+}

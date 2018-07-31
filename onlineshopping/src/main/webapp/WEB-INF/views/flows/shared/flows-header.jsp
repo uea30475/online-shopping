@@ -21,6 +21,7 @@
     
     <script type="text/javascript">
     window.menu='${title}';
+    window.contextRoot='${contextRoot}'
     </script>
 	<!-- Bootstrap Core CSS -->
 	<link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -28,42 +29,15 @@
     <link href="${css }/bootstrap-readable-theme.css" rel="stylesheet">
 
 
+	<!-- Bootstrap DataTables -->
+	<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="${css }/myapp.css" rel="stylesheet">
 
   </head>
 
   <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-        <a class="navbar-brand" href="${contextRoot}/home">Online Shopping</a>
-    </nav>
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						
-						
-						<div class="jumbotro">
-							
-							<h1>${errorTitle }</h1>
-							<hr/>
-							<blockquote style="word-wrap:break-word">
-								${errorDescription }
-							</blockquote>
-							
-							
-						
-						</div>
-						
-					</div>
-				
-				
-				</div>
-			
-			
-			</div>
-		
-		
-	 <%@include file="./shared/footer.jsp" %>
-  </body>
-
-</html>
+	<!-- Navigation -->
+	<%@include file="../shared/flows-navbar.jsp" %>
+	
